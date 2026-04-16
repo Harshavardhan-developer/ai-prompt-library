@@ -1,4 +1,4 @@
-# 🤖 AI Prompt Library
+🤖 AI Prompt Library
 
 A full-stack web application for managing and organizing AI image generation prompts. Built with Django, Angular, PostgreSQL, and Redis.
 
@@ -44,9 +44,9 @@ A full-stack web application for managing and organizing AI image generation pro
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ai-prompt-library.git
+   git clone "https://github.com/Harshavardhan-developer/ai-prompt-library"
    cd ai-prompt-library
-Start all services
+2. Start all services
 
 docker-compose up --build
 Access the application
@@ -110,28 +110,6 @@ Database Schema
 Prompt: UUID primary key, title, content, complexity, created_at
 Tag: Many-to-Many relationship with Prompts
 View Counter: Redis key-value (separate from PostgreSQL)
-🌐 Deployment
-Backend (Render)
-Push code to GitHub
-Create new Web Service on Render
-Settings:
-Build Command: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
-Start Command: gunicorn config.wsgi:application
-Add PostgreSQL and Redis instances
-Update ALLOWED_HOSTS and CORS_ALLOWED_ORIGINS
-Frontend (Vercel)
-Import GitHub repository
-Framework Preset: Angular
-Build Command: ng build --configuration production
-Output Directory: dist/frontend
-Add environment variable:
-API_URL: Your Render backend URL
-📸 Screenshots
-Add screenshots here showing:
-
-Prompt List View
-Add Prompt Form with validation
-Detail View with live counter
 🎯 Validation Rules
 Field	Rule	Error Message
 Title	Min 3 characters	"Title must be at least 3 characters"
@@ -165,30 +143,5 @@ ng serve
 MIT License - feel free to use this project for learning or commercial purposes.
 
 🙏 Acknowledgments
-Assignment from [Emplay] for Full Stack Developer Intern position
+Assignment from Emplay for Full Stack Developer Intern position
 Built with Django and Angular best practices
-
-## 🚀 How to Use This README
-
-1. **Create the file:**
-   ```bash
-   cd ~/ai-promt/ai-prompt-library
-   code README.md  # or use notepad/vim
-Paste the content above
-
-Customize these parts:
-
-Replace YOUR_USERNAME with your actual GitHub username
-Update the screenshot section with actual images (use GitHub's drag & drop)
-Add your deployed URLs once live
-Push to GitHub:
-
-git add README.md
-git commit -m "Add comprehensive README"
-git push
-Want me to customize any specific section? For example, I can add:
-
-Specific deployment instructions for Railway/Heroku
-More detailed API documentation
-Testing instructions with pytest/Jest
-CI/CD pipeline setup (GitHub Actions)
